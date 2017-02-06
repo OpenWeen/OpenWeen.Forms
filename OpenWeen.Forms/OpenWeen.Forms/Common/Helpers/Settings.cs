@@ -39,7 +39,13 @@ namespace OpenWeen.Forms.Common.Helpers
         public static int SelectedUserIndex
         {
             get { return AppSettings.GetValueOrDefault(nameof(SelectedUserIndex), 0); }
-            set { AppSettings.AddOrUpdateValue(nameof(SelectedUserIndex), value); }
+            internal set { AppSettings.AddOrUpdateValue(nameof(SelectedUserIndex), value); }
+        }
+
+        public static int LoadCount
+        {
+            get { return AppSettings.GetValueOrDefault(nameof(LoadCount), 20); }
+            internal set { AppSettings.AddOrUpdateValue(nameof(LoadCount), value); }
         }
     }
 }

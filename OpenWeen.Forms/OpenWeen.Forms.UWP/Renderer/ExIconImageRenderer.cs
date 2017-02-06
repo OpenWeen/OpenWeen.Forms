@@ -28,7 +28,7 @@ namespace OpenWeen.Forms.UWP.Renderer
             base.OnElementChanged(e);
             if (Control == null || Element == null)
                 return;
-            await UpdateImage();
+            await UpdateImageAsync();
         }
         protected override async void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -41,12 +41,12 @@ namespace OpenWeen.Forms.UWP.Renderer
                 case nameof(IconImage.Icon):
                 case nameof(IconImage.IconColor):
                 case nameof(IconImage.IconSize):
-                    await UpdateImage();
+                    await UpdateImageAsync();
                     break;
             }
         }
 
-        private async Task UpdateImage()
+        private async Task UpdateImageAsync()
         {
             var iconImage = Element as IconImage;
             var icon = Plugin.Iconize.Iconize.FindIconForKey(iconImage.Icon);

@@ -13,16 +13,22 @@ namespace OpenWeen.Forms
         public App()
         {
             InitializeComponent();
-            if (Settings.AccessTokens.Length == 0)
-            {
-                MainPage = new Common.Controls.ExIconNavigationPage(new LoginPage()) { BarBackgroundColor = (Color)Resources["AppTheme"], BarTextColor = Color.White, };
-            }
-            else
-            {
-                MainPage = new MainPage();
-            }
+            //if (Settings.AccessTokens.Length == 0)
+            //{
+            //    SetMainPage(new LoginPage());
+            //}
+            //else
+            //{
+            //    SetMainPage(new MainPage());
+            //}
+            SetMainPage(new MainPage());
         }
 
+        internal static void SetMainPage(Page page)
+        {
+            Current.MainPage = new Common.Controls.ExIconNavigationPage(page) { BarBackgroundColor = (Color)Current.Resources["AppTheme"], BarTextColor = Color.White, };
+        }
+        
         protected override void OnStart()
         {
             // Handle when your app starts

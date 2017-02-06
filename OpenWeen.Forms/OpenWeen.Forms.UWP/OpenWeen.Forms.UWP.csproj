@@ -90,6 +90,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="app.config" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +104,7 @@
     <Compile Include="Renderer\ExIconImageRenderer.cs" />
     <Compile Include="Renderer\ExIconNavigationRenderer.cs" />
     <Compile Include="Renderer\ExListViewRenderer.cs" />
+    <Compile Include="Renderer\WeiboTextBlockRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -132,7 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenWeen.Forms\OpenWeen.Forms.csproj">
-      <Project>{e2afbba1-2b60-454f-9d35-e52cfbf057aa}</Project>
+      <Project>{99ebf978-6e51-4e1e-8908-f8bb13dbcd0b}</Project>
       <Name>OpenWeen.Forms</Name>
     </ProjectReference>
   </ItemGroup>

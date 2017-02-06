@@ -2,7 +2,9 @@
 <popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-                 BackgroundColor="White"             
+                 Title="登陆信息"
+                 BackgroundColor="White"       
+                 HasSystemPadding="True"
                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
                  x:Class="OpenWeen.Forms.View.LoginDataPopup">
     <popup:PopupPage.Animation>
@@ -10,25 +12,21 @@
             PositionIn="Bottom"
             PositionOut="Bottom"/>
     </popup:PopupPage.Animation>
-    <StackLayout Orientation="Vertical" Padding="16">
-        <TableView Intent="Form">
-            <TableRoot>
-                <TableSection Title="请输入以下内容完成登陆过程">
-                    <EntryCell Text="{Binding AppID,Mode=TwoWay}" Completed="StartLogin" Placeholder="App ID"/>
-                    <EntryCell Text="{Binding AppSecret,Mode=TwoWay}" Completed="StartLogin" Placeholder="App Secret"/>
-                    <EntryCell Text="{Binding RedirectUri,Mode=TwoWay}" Completed="StartLogin" Placeholder="Redirect Uri"/>
-                    <EntryCell Text="{Binding Scope,Mode=TwoWay}" Completed="StartLogin" Placeholder="Scope"/>
-                    <EntryCell Text="{Binding PackageName,Mode=TwoWay}" Completed="StartLogin" Placeholder="Package Name"/>
-                </TableSection>
-                <TableSection>
-                    <ViewCell>
-                        <Button Clicked="StartLogin" Text="登陆" HorizontalOptions="Fill"/>
-                    </ViewCell>
-                    <ViewCell>
-                        <Button Clicked="Button_Clicked_1" Text="这是什么?" HorizontalOptions="Fill"/>
-                    </ViewCell>
-                </TableSection>
-            </TableRoot>
-        </TableView>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout Orientation="Vertical" Padding="16">
+            <Label Text="请输入以下内容完成登陆过程"/>
+            <Label Text="App ID"/>
+            <Entry Text="{Binding AppID,Mode=TwoWay}"/>
+            <Label Text="App Secret"/>
+            <Entry Text="{Binding AppSecret,Mode=TwoWay}"/>
+            <Label Text="Redirect Uri"/>
+            <Entry Text="{Binding RedirectUri,Mode=TwoWay}"/>
+            <Label Text="Scope"/>
+            <Entry Text="{Binding Scope,Mode=TwoWay}"/>
+            <Label Text="Package Name"/>
+            <Entry Text="{Binding PackageName,Mode=TwoWay}"/>
+            <Button Clicked="StartLoginAsync" Text="登陆" HorizontalOptions="Fill"/>
+            <Button Clicked="Button_Clicked_1" Text="这是什么?" HorizontalOptions="Fill"/>
+        </StackLayout>
+    </ScrollView>
 </popup:PopupPage>

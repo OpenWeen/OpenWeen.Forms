@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    x:Class="OpenWeen.Forms.Common.Controls.WeiboImageList">
+    <ContentView.Content>
+        <Grid x:Name="root">
+            <Grid x:Name="NineGrid" IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="1" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="2" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="1" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="2" Margin="4" />
+            </Grid>
+            <Grid x:Name="SixGrid" IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="1" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="2" Margin="4" />
+            </Grid>
+            <Grid x:Name="FourGird" IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="1" Margin="4" />
+            </Grid>
+            <Grid x:Name="ThreeGrid" IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.RowSpan="2" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="1" Margin="4" />
+            </Grid>
+            <Grid x:Name="TwoGrid" IsVisible="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Margin="4" />
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Margin="4" />
+            </Grid>
+            <Grid x:Name="OneGrid" IsVisible="False">
+                <ffimage:CachedImage HorizontalOptions="Center" VerticalOptions="Center" Margin="4" />
+            </Grid>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

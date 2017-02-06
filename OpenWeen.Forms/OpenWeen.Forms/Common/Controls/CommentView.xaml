@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OpenWeen.Forms.Common.Controls.CommentView"
+             xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
+             xmlns:local="clr-namespace:OpenWeen.Forms.Common.Controls">
+    <ContentView.Content>
+        <StackLayout Orientation="Vertical">
+            <Grid Padding="0,0,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <local:WeiboTextBlock Text="{Binding Text}"/>
+                <iconize:IconImage IconColor="{StaticResource SplitlineColor}" Icon="md-comment"/>
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

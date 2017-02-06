@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="OpenWeen.Forms.Common.Controls.UserHeader"
+             xmlns:circle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+    <ContentView.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <circle:CircleImage x:Name="UserImage" Source="{Binding ProfileImageUrl}" WidthRequest="{StaticResource UserImageSize}" HeightRequest="{StaticResource UserImageSize}" Aspect="AspectFill"/>
+            <Grid Grid.Column="1" Padding="8,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="{Binding ScreenName}"/>
+                <Label Text="{Binding CreateTime,Converter={StaticResource TimeConverter}}" Grid.Row="1" TextColor="#CCCCCC" FontSize="10"/>
+            </Grid>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -51,8 +51,10 @@ namespace OpenWeen.Forms.View
             Device.OpenUri(new Uri("https://gist.github.com/PeterCxy/3085799055f63c63c911"));
         }
 
-        private async void StartLogin(object sender, EventArgs e)
+        private async void StartLoginAsync(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(AppID) || string.IsNullOrEmpty(AppSecret) || string.IsNullOrEmpty(RedirectUri) || string.IsNullOrEmpty(Scope) || string.IsNullOrEmpty(PackageName))
+                return;
             RequestLogin?.Invoke($"https://api.weibo.com/oauth2/authorize?client_id={AppID}&response_type=token&display=mobile&redirect_uri={RedirectUri}&key_hash={AppSecret}{(string.IsNullOrEmpty(PackageName) ? "" : $"&packagename={PackageName}")}&scope={Scope}");
             await PopupNavigation.PopAsync();
         }
